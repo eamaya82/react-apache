@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="theme-color" content="#000000">
+		<title>ReactJS</title>
+
+		<!--Configurable module loader enabling dynamic ES module workflows//-->
+		<script src="src/libs/systemjs/system.src.js"></script>
+		<!--systemjs config + SystemJS Babel Plugin + Css loader//-->
+		<script src="src/libs/systemjs/config.js"></script>
+
+		<script>
+			// start program loading /src/index.js the "/src/" as a base path is in systemjs configuration file
+			System.import('index.js').then(null, console.error.bind(console));
+		</script>
+	</head>
+	<body>
+		<noscript>
+			You need to enable JavaScript to run this app!!
+		</noscript>
+		<div id="root"></div>
+	</body>
+</html>
